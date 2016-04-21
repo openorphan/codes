@@ -1,0 +1,49 @@
+I, [2016-04-14T18:24:47.099397 #2360]  INFO -- default-centos-7: -----> Cleaning up any prior instances of <default-centos-7>
+I, [2016-04-14T18:24:47.099585 #2360]  INFO -- default-centos-7: -----> Destroying <default-centos-7>...
+I, [2016-04-14T18:24:47.100497 #2360]  INFO -- default-centos-7: Finished destroying <default-centos-7> (0m0.00s).
+I, [2016-04-14T18:24:47.100936 #2360]  INFO -- default-centos-7: -----> Testing <default-centos-7>
+I, [2016-04-14T18:24:47.101007 #2360]  INFO -- default-centos-7: -----> Creating <default-centos-7>...
+I, [2016-04-14T18:24:47.101089 #2360]  INFO -- default-centos-7: If you are not using an account that qualifies under the AWS
+free-tier, you may be charged to run these suites. The charge
+should be minimal, but neither Test Kitchen nor its maintainers
+are responsible for your incurred costs.
+
+I, [2016-04-14T18:24:49.833123 #2360]  INFO -- default-centos-7: instance_type not specified. Using free tier t2.micro instance ...
+I, [2016-04-14T18:24:49.833398 #2360]  INFO -- default-centos-7: Detected platform: centos version 7 on x86_64. Instance Type: t2.micro. Default username: centos (default).
+I, [2016-04-14T18:24:49.833516 #2360]  INFO -- default-centos-7: instance_type not specified. Using free tier t2.micro instance ...
+E, [2016-04-14T18:24:50.301918 #2360] ERROR -- default-centos-7: Create failed on instance <default-centos-7>.
+E, [2016-04-14T18:24:50.303232 #2360] ERROR -- default-centos-7: ------Exception-------
+E, [2016-04-14T18:24:50.303358 #2360] ERROR -- default-centos-7: Class: Aws::EC2::Errors::OptInRequired
+E, [2016-04-14T18:24:50.303415 #2360] ERROR -- default-centos-7: Message: In order to use this AWS Marketplace product you need to accept terms and subscribe. To do so please visit http://aws.amazon.com/marketplace/pp?sku=aw0evgkw8e5c1q413zgy5pjce
+E, [2016-04-14T18:24:50.303461 #2360] ERROR -- default-centos-7: ------Backtrace-------
+E, [2016-04-14T18:24:50.303505 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-core-2.2.34/lib/seahorse/client/plugins/raise_response_errors.rb:15:in `call'
+E, [2016-04-14T18:24:50.303546 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-core-2.2.34/lib/aws-sdk-core/plugins/param_converter.rb:20:in `call'
+E, [2016-04-14T18:24:50.303589 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-core-2.2.34/lib/seahorse/client/plugins/response_target.rb:21:in `call'
+E, [2016-04-14T18:24:50.303789 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-core-2.2.34/lib/seahorse/client/request.rb:70:in `send_request'
+E, [2016-04-14T18:24:50.303840 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-core-2.2.34/lib/seahorse/client/base.rb:207:in `block (2 levels) in define_operation_methods'
+E, [2016-04-14T18:24:50.303881 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-resources-2.2.34/lib/aws-sdk-resources/request.rb:24:in `call'
+E, [2016-04-14T18:24:50.303921 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-resources-2.2.34/lib/aws-sdk-resources/operations.rb:41:in `call'
+E, [2016-04-14T18:24:50.303961 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-resources-2.2.34/lib/aws-sdk-resources/operations.rb:87:in `call'
+E, [2016-04-14T18:24:50.304001 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/aws-sdk-resources-2.2.34/lib/aws-sdk-resources/operation_methods.rb:19:in `block in add_operation'
+E, [2016-04-14T18:24:50.304042 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/kitchen-ec2-1.0.0/lib/kitchen/driver/aws/client.rb:77:in `create_instance'
+E, [2016-04-14T18:24:50.304082 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/kitchen-ec2-1.0.0/lib/kitchen/driver/ec2.rb:319:in `submit_server'
+E, [2016-04-14T18:24:50.304122 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/kitchen-ec2-1.0.0/lib/kitchen/driver/ec2.rb:170:in `create'
+E, [2016-04-14T18:24:50.304162 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:449:in `public_send'
+E, [2016-04-14T18:24:50.304227 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:449:in `block in perform_action'
+E, [2016-04-14T18:24:50.304276 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:513:in `call'
+E, [2016-04-14T18:24:50.304317 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2016-04-14T18:24:50.304355 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:478:in `block in action'
+E, [2016-04-14T18:24:50.304395 #2360] ERROR -- default-centos-7: /usr/share/ruby/benchmark.rb:281:in `measure'
+E, [2016-04-14T18:24:50.304434 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:477:in `action'
+E, [2016-04-14T18:24:50.304473 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:449:in `perform_action'
+E, [2016-04-14T18:24:50.304513 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:359:in `create_action'
+E, [2016-04-14T18:24:50.304553 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2016-04-14T18:24:50.304720 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:347:in `each'
+E, [2016-04-14T18:24:50.304779 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2016-04-14T18:24:50.304820 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:160:in `verify'
+E, [2016-04-14T18:24:50.304859 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:189:in `block in test'
+E, [2016-04-14T18:24:50.304899 #2360] ERROR -- default-centos-7: /usr/share/ruby/benchmark.rb:281:in `measure'
+E, [2016-04-14T18:24:50.304938 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/instance.rb:185:in `test'
+E, [2016-04-14T18:24:50.304976 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/command.rb:176:in `public_send'
+E, [2016-04-14T18:24:50.305017 #2360] ERROR -- default-centos-7: /usr/local/share/gems/gems/test-kitchen-1.7.3/lib/kitchen/command.rb:176:in `block (2 levels) in run_action'
+E, [2016-04-14T18:24:50.305056 #2360] ERROR -- default-centos-7: ----------------------

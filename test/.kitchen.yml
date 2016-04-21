@@ -1,0 +1,28 @@
+---
+driver:
+  name: ec2
+  aws_ssh_key_id: test
+  region: us-east-1
+  availability_zone: a
+  require_chef_omnibus: true
+  associate_public_ip: true
+  interface: dns
+
+transport:
+  ssh_key: /root/test.pem
+  connection_timeout: 10
+  connection_retries: 5
+  username: ec2-user
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: rhel-7.2
+    image_id: ami-2051294a
+
+suites:
+  - name: default
+    run_list:
+      - recipe[test::default]
+    attributes:
